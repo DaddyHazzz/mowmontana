@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,34 +18,46 @@
             font-family: 'Roboto', sans-serif;
             line-height: 1.6;
             color: #333;
+            background-color: #f8f9fa;
+        }
+
+        header {
+            background-color: #4CAF50;
+            padding: 20px;
+            text-align: center;
+            font-size: 35px;
+            color: white;
+        }
+
+        .slogan {
+            text-align: center;
+            font-size: 24px;
+            margin-top: -10px;
+            color: #555;
+            font-weight: 300;
         }
 
         .banner {
             position: relative;
             text-align: center;
-            height: 100vh;
-            background: url("https://i.ibb.co/KbMZyk9/mm.png") no-repeat center center fixed;
-            background-size: cover;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            margin-bottom: 30px;
+            overflow: hidden;
         }
 
-        .banner h1, .banner h2 {
-            color: white;
-            font-weight: 700;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        }
-
-        .banner h1 {
-            font-size: 48px;
-            margin-bottom: 10px;
+        .banner img {
+            width: 100%;
+            height: auto;
         }
 
         .banner h2 {
-            font-size: 24px;
-            margin-bottom: 50px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 48px;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
 
         .content {
@@ -52,22 +65,35 @@
         }
 
         .services {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            margin-bottom: 30px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
         }
 
-        .services .card {
-            flex: 0 0 calc(33.333% - 20px);
-            margin-bottom: 20px;
+        .service-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .service-card h3 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .service-card p {
+            font-size: 16px;
         }
 
         .contact {
             background-color: #f4f4f4;
             padding: 20px;
             margin-top: 20px;
-            text-align: center;
+            border-radius: 8px;
         }
 
         .contact h3 {
@@ -77,15 +103,43 @@
         }
     </style>
 </head>
+
 <body>
+    <header>
+        Mow Montana
+    </header>
+    <p class="slogan">Mow lawns, mow problem!</p>
     <div class="banner">
-        <h1>Welcome to Mow Montana!</h1>
-        <h2>Mow lawns, mow problems.</h2>
+        <img src="https://i.ibb.co/KbMZyk9/mm.png" alt="Mow Montana Lawn Mowing Services">
+        <h2>Welcome to Mow Montana!</h2>
     </div>
-    <div class="content">
+       <div class="content">
         <p>We provide professional lawn mowing services to help you maintain a beautiful and healthy lawn. Our experienced team is dedicated to delivering exceptional service and ensuring your satisfaction. Contact us today to schedule your lawn mowing service and let us take care of your lawn.</p>
+
         <div class="services">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Lawn Mowing</h5>
-                    <p class="card-text">We offer weekly, biweekly, or one-time lawn mowing services to keep your grass looking its best
+            <div class="service-card">
+                <h3>Lawn Mowing</h3>
+                <p>Our expert team provides regular and reliable lawn mowing services to keep your yard looking its best.</p>
+            </div>
+            <div class="service-card">
+                <h3>Trimming & Edging</h3>
+                <p>We offer trimming and edging services to maintain a clean and professional appearance for your lawn.</p>
+            </div>
+            <div class="service-card">
+                <h3>Seasonal Cleanup</h3>
+                <p>Our seasonal cleanup services ensure your yard stays beautiful and healthy year-round.</p>
+            </div>
+        </div>
+
+        <div class="contact">
+            <h3>Contact Us</h3>
+            <p>Phone: (406) 559-9981</p>
+            <p>Email: ryanhoffman@mowmontana.com</p>
+            <p>Address: 15190 Erskine Access, Frenchtown, MT 59834</p>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
